@@ -20,7 +20,7 @@ const Pagination = ({
       {currentPage !== 1 && (
         <div className={styles.arrowLeft} onClick={prevPage} />
       )}
-      <span>
+      <span className={styles.num}>
         {prevItem}-{nexItem}
       </span>
       {nexItem !== maxItems && (

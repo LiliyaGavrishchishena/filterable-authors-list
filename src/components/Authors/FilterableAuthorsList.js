@@ -108,15 +108,29 @@ export default class FilterableAuthorsList extends Component {
 
   render() {
     const { authors, filter, currentPage, authorsPerPage } = this.state;
+    // const prevItem =
+    //   currentPage === 1 ? 0 : currentPage * authorsPerPage - authorsPerPage;
+    // const nexItem =
+    //   currentPage * authorsPerPage <= authors.length
+    //     ? currentPage * authorsPerPage
+    //     : authors.length;
+    // const filteredAuthors = authors
+    //   .filter(item => item.name.toLowerCase().includes(filter.toLowerCase()))
+    //   .slice(prevItem, nexItem);
+
+    const filteredAuthors = authors.filter(item =>
+      item.name.toLowerCase().includes(filter.toLowerCase())
+    );
+
     const prevItem =
       currentPage === 1 ? 0 : currentPage * authorsPerPage - authorsPerPage;
+
     const nexItem =
-      currentPage * authorsPerPage <= authors.length
+      currentPage * authorsPerPage <= filteredAuthors.length
         ? currentPage * authorsPerPage
-        : authors.length;
-    const filteredAuthors = authors
-      .filter(item => item.name.toLowerCase().includes(filter))
-      .slice(prevItem, nexItem);
+        : filteredAuthors.length;
+
+    const authorOnePage = filteredAuthors.slice(prevItem, nexItem);
 
     return (
       <div className={styles.container}>
@@ -125,22 +139,23 @@ export default class FilterableAuthorsList extends Component {
           handleChangeFilter={this.handleChangeFilter}
         />
         {filteredAuthors.length > 0 ? (
-          <AuthorsList
-            items={filteredAuthors}
-            sortedAuthor={this.handleChangeSortedByAuthor}
-            sortedPageViews={this.handleChangeSortedPageViews}
-          />
+          <div>
+            <AuthorsList
+              items={authorOnePage}
+              sortedAuthor={this.handleChangeSortedByAuthor}
+              sortedPageViews={this.handleChangeSortedPageViews}
+            />
+            <Pagination
+              maxItems={filteredAuthors.length}
+              currentPage={currentPage}
+              authorsPerPage={authorsPerPage}
+              nextPage={this.handleChangeNextPage}
+              prevPage={this.handleChangePrevPage}
+            />
+          </div>
         ) : (
           <h3>Попробуйте изменить условия поиска</h3>
         )}
-
-        <Pagination
-          maxItems={authors.length}
-          currentPage={currentPage}
-          authorsPerPage={authorsPerPage}
-          nextPage={this.handleChangeNextPage}
-          prevPage={this.handleChangePrevPage}
-        />
       </div>
     );
   }

@@ -49,7 +49,12 @@ const AuthorItem = ({ author, index, sortedAuthor, sortedPageViews }) => {
       </div>
       <div className={styles.medal}>{getMedalForViews(author.raiting)}</div>
       <div className={styles.pageviews} onClick={sortedPageViews}>
-        {author.pageviews}
+        {author.pageviews > 1000
+          ? '' +
+            Math.floor(author.pageviews / 1000) +
+            ' ' +
+            author.pageviews.toString().slice(-3)
+          : author.pageviews}
       </div>
     </div>
   );
