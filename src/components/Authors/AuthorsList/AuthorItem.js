@@ -1,7 +1,7 @@
 import React from 'react';
-import medalGold from './asssets/medals/1st.svg';
-import medalSilver from './asssets/medals/2nd.svg';
-import medalBronze from './asssets/medals/3rd.svg';
+import medalGold from '../asssets/medals/1st.svg';
+import medalSilver from '../asssets/medals/2nd.svg';
+import medalBronze from '../asssets/medals/3rd.svg';
 
 import styles from './AuthorItem.module.css';
 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import SearchBar from './SearchBar';
-import AuthorsList from './AuthorsList';
-import Pagination from './Pagination';
+import SearchBar from './SearchBar/SearchBar';
+import AuthorsList from './AuthorsList/AuthorsList';
+import Pagination from './Pagination/Pagination';
 
 import styles from './FilterableAuthorsList.module.css';
 

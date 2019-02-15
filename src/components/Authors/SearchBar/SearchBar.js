@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './SearchBar.module.css';
-import search from './asssets/search.png';
+import search from '../asssets/search.png';
 
 const SearchBar = ({ filter = '', handleChangeFilter }) => (
   <form className={styles.form}>
