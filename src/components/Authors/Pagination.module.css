@@ -1,0 +1,27 @@
+.pagination {
+  margin: 0 auto 50px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+.arrowLeft {
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: translate(-50%, -50%) rotate(45deg);
+  position: absolute;
+  bottom: 0;
+  left: -40%;
+}
+.arrowRight {
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: translate(-50%, -50%) rotate(-135deg);
+  position: absolute;
+  bottom: 0;
+  right: -75%;
+}

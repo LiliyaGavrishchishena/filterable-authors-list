@@ -1,0 +1,77 @@
+.line {
+  display: flex;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.number {
+  flex: 0 0 4%;
+  color: #b9bec2;
+  font-size: 10px;
+  text-align: center;
+}
+
+.number:before {
+  content: '';
+  display: inline-block;
+  min-height: inherit;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.color {
+  flex: 0 0 10%;
+}
+
+.round {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  padding: 3px;
+  box-shadow: 2px 2px 16px 6px rgba(185, 190, 194, 0.6);
+}
+
+.letter {
+  color: #feffff;
+  font-weight: bold;
+}
+
+.letter:before {
+  content: '';
+  display: inline-block;
+  min-height: inherit;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.name {
+  flex: 0 0 44%;
+  text-align: left;
+}
+
+.author {
+  font-weight: bold;
+  color: #153649;
+}
+
+.count_pub {
+  color: #b9bec2;
+}
+.medal {
+  flex: 0 0 15%;
+}
+.pageviews {
+  flex: 0 0 20%;
+  text-align: right;
+  font-weight: bold;
+  color: #153649;
+}
+
+.pageviews:before {
+  content: '';
+  display: inline-block;
+  min-height: inherit;
+  height: 100%;
+  vertical-align: middle;
+}

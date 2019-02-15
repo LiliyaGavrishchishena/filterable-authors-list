@@ -1,0 +1,25 @@
+.form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: #e8eef4;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.img {
+  width: 30px;
+  height: 30px;
+  padding: 20px;
+}
+
+.input {
+  display: flex;
+  color: #b9bec2;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  background-color: #e8eef4;
+}
+.input:focus {
+  outline: none;
+}
